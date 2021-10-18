@@ -27,8 +27,9 @@ RUN apt-get -y install htop
 # 3) install packages
 USER jovyan
 
-# RUN conda install -y scikit-learn
-RUN pip install --yes geopandas babypandas
+RUN conda install -y scikit-learn
+RUN pip install --no-cache-dir babypandas
+RUN pip install --no-cache-dir geopandas
 RUN pip install --no-cache-dir networkx scipy
 
 # 4) change back to notebook user
