@@ -33,8 +33,7 @@ RUN pip install --no-cache-dir geopandas
 RUN pip install --no-cache-dir networkx scipy
 
 # 4) change back to notebook user
-COPY /run_jupyter.sh /
-RUN chmod 755 /run_jupyter.sh
+
 
 # Override command to disable running jupyter notebook at launch
 # CMD ["/bin/bash"]
